@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\ProjectsController;
 use Illuminate\Support\Facades\Route;
 
-// WelcomeController::class -> o "nome completo" em string daquela classe (App\Alguma\Coisa\WelcomeController)
-Route::get('/', WelcomeController::class);
+Route::get('/', [ProjectsController::class, 'index'])->name('projects.index');
+
+Route::get('/project/{project}', [ProjectsController::class, 'show'])->name('projects.show');
