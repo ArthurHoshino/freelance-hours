@@ -8,7 +8,10 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class PerdeuPosicao extends Notification
+// agora ele vai criar uma fila de jobs no banco de dados
+// para rodar esses jobs que estão na fila basta rodar
+// php artisan queue:work
+class PerdeuPosicao extends Notification implements ShouldQueue
 {
     use Queueable;
 
