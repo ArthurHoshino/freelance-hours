@@ -20,7 +20,7 @@ class Create extends Component
     public bool $agree = false;
 
     public function save() {
-        $this->validade();
+        $this->validate();
         if (!$this->agree) {
             $this->addError('agree', 'É necessário concordar com os termos de uso');
             return;
@@ -31,6 +31,9 @@ class Create extends Component
                 ['email' => $this->email],
                 ['hours' => $this->hours]
             );
+
+        $this->dispatch('proposal::created');
+        $this->modal = false;
     }
 
     public function render()
