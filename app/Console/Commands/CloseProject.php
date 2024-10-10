@@ -33,6 +33,6 @@ class CloseProject extends Command
             ->where('ends_at', '<=', now())
             ->update(['status' => 'closed']);
 
-        Log::info('Command [app:close-project] executed')
+        Log::info('Command [app:close-project] executed');
     }
 }
