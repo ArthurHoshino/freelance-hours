@@ -1,6 +1,7 @@
 # Freelance Hours
 
-**Projeto desenvolvido com a Rocketseat em um curso gratuito de PHP, utilizando Laravel e Livewire**
+#### Projeto desenvolvido com a Rocketseat em um curso gratuito de PHP, utilizando Laravel e Livewire
+Website para publicação de projetos e envio de propostas por freelancers, organizando as propostas pelo tempo necessário para completá-las.
 
 ## Para executar o projeto
 Primeiro instale as dependências:
@@ -9,7 +10,7 @@ composer install
 npm install
 ```
 
-Em seguida, basta rodar o projeto e os estilos
+Em seguida, basta rodar o projeto e os estilos:
 ```
 php artisan serve
 npm run dev
